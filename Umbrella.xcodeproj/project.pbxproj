@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				EC65F5BE28B54F3E00114258 /* LaunchScreen.storyboard */,
-				EC65F5B728B54F3C00114258 /* HomeViewController.swift */,
+				EC73A7D028B6BD29003DE575 /* HomeViewController */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -113,6 +113,14 @@
 			children = (
 			);
 			path = Expansion;
+			sourceTree = "<group>";
+		};
+		EC73A7D028B6BD29003DE575 /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EC65F5B728B54F3C00114258 /* HomeViewController.swift */,
+			);
+			path = HomeViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
