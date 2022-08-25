@@ -15,6 +15,10 @@
 		EC73A7CF28B6BCB4003DE575 /* UmbrellaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC73A7CE28B6BCB4003DE575 /* UmbrellaModel.swift */; };
 		EC73A7D828B7723A003DE575 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = EC73A7D728B7723A003DE575 /* SnapKit */; };
 		EC73A7DE28B78A25003DE575 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC73A7DD28B78A25003DE575 /* UITableView.swift */; };
+		EC73A7E128B795AE003DE575 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC73A7E028B795AE003DE575 /* ListTableViewCell.swift */; };
+		EC73A7E328B795EF003DE575 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC73A7E228B795EF003DE575 /* UIView.swift */; };
+		EC73A7E528B79EBA003DE575 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC73A7E428B79EBA003DE575 /* UIColor.swift */; };
+		EC73A7E728B79EDB003DE575 /* ColorSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC73A7E628B79EDB003DE575 /* ColorSetup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,10 @@
 		EC65F5C128B54F3E00114258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC73A7CE28B6BCB4003DE575 /* UmbrellaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UmbrellaModel.swift; sourceTree = "<group>"; };
 		EC73A7DD28B78A25003DE575 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
+		EC73A7E028B795AE003DE575 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		EC73A7E228B795EF003DE575 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		EC73A7E428B79EBA003DE575 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		EC73A7E628B79EDB003DE575 /* ColorSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSetup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				EC73A7DC28B78A17003DE575 /* UIKit */,
+				EC73A7E628B79EDB003DE575 /* ColorSetup.swift */,
 			);
 			path = Expansion;
 			sourceTree = "<group>";
@@ -123,6 +132,7 @@
 		EC73A7D028B6BD29003DE575 /* HomeViewController */ = {
 			isa = PBXGroup;
 			children = (
+				EC73A7DF28B7959A003DE575 /* Cell */,
 				EC65F5B728B54F3C00114258 /* HomeViewController.swift */,
 			);
 			path = HomeViewController;
@@ -132,8 +142,18 @@
 			isa = PBXGroup;
 			children = (
 				EC73A7DD28B78A25003DE575 /* UITableView.swift */,
+				EC73A7E228B795EF003DE575 /* UIView.swift */,
+				EC73A7E428B79EBA003DE575 /* UIColor.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		EC73A7DF28B7959A003DE575 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EC73A7E028B795AE003DE575 /* ListTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,8 +235,12 @@
 				EC65F5B828B54F3C00114258 /* HomeViewController.swift in Sources */,
 				EC65F5B428B54F3C00114258 /* AppDelegate.swift in Sources */,
 				EC73A7DE28B78A25003DE575 /* UITableView.swift in Sources */,
+				EC73A7E328B795EF003DE575 /* UIView.swift in Sources */,
 				EC65F5B628B54F3C00114258 /* SceneDelegate.swift in Sources */,
+				EC73A7E528B79EBA003DE575 /* UIColor.swift in Sources */,
 				EC73A7CF28B6BCB4003DE575 /* UmbrellaModel.swift in Sources */,
+				EC73A7E728B79EDB003DE575 /* ColorSetup.swift in Sources */,
+				EC73A7E128B795AE003DE575 /* ListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,13 +10,14 @@ import SnapKit
 
 class HomeViewController: UIViewController {
     
+    // MARK: UI-components
     private let listTableView = UITableView(backgroundColor: .clear)
     
+    // MARK: Lifecycle viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        title = "HomeViewController"
-        print(#function)
+        view.backgroundColor = .white
+        title = "List of cities"
         
         setupTableView(for: listTableView)
         setupConstraints()
@@ -24,7 +25,8 @@ class HomeViewController: UIViewController {
     
     // MARK: SetupTableView function
     private func setupTableView(for tableView: UITableView) {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellID")
+        tableView.register(ListTableViewCell.self, forCellReuseIdentifier: ListTableViewCell.cellID)
+        tableView.rowHeight = 100
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -33,12 +35,21 @@ class HomeViewController: UIViewController {
 // MARK: - UITableViewDelegate, UITableViewDataSource
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellID", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.cellID, for: indexPath) as! ListTableViewCell
+        cell.backgroundColor = .clear
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
