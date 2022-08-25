@@ -13,6 +13,8 @@
 		EC65F5BD28B54F3E00114258 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC65F5BC28B54F3E00114258 /* Assets.xcassets */; };
 		EC65F5C028B54F3E00114258 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC65F5BE28B54F3E00114258 /* LaunchScreen.storyboard */; };
 		EC73A7CF28B6BCB4003DE575 /* UmbrellaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC73A7CE28B6BCB4003DE575 /* UmbrellaModel.swift */; };
+		EC73A7D828B7723A003DE575 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = EC73A7D728B7723A003DE575 /* SnapKit */; };
+		EC73A7DE28B78A25003DE575 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC73A7DD28B78A25003DE575 /* UITableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		EC65F5BF28B54F3E00114258 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC65F5C128B54F3E00114258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC73A7CE28B6BCB4003DE575 /* UmbrellaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UmbrellaModel.swift; sourceTree = "<group>"; };
+		EC73A7DD28B78A25003DE575 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC73A7D828B7723A003DE575 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +115,7 @@
 		EC73A7CD28B6B96B003DE575 /* Expansion */ = {
 			isa = PBXGroup;
 			children = (
+				EC73A7DC28B78A17003DE575 /* UIKit */,
 			);
 			path = Expansion;
 			sourceTree = "<group>";
@@ -121,6 +126,14 @@
 				EC65F5B728B54F3C00114258 /* HomeViewController.swift */,
 			);
 			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		EC73A7DC28B78A17003DE575 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				EC73A7DD28B78A25003DE575 /* UITableView.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +152,9 @@
 			dependencies = (
 			);
 			name = Umbrella;
+			packageProductDependencies = (
+				EC73A7D728B7723A003DE575 /* SnapKit */,
+			);
 			productName = Umbrella;
 			productReference = EC65F5B028B54F3C00114258 /* Umbrella.app */;
 			productType = "com.apple.product-type.application";
@@ -167,6 +183,9 @@
 				Base,
 			);
 			mainGroup = EC65F5A728B54F3C00114258;
+			packageReferences = (
+				EC73A7D628B7723A003DE575 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = EC65F5B128B54F3C00114258 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -195,6 +214,7 @@
 			files = (
 				EC65F5B828B54F3C00114258 /* HomeViewController.swift in Sources */,
 				EC65F5B428B54F3C00114258 /* AppDelegate.swift in Sources */,
+				EC73A7DE28B78A25003DE575 /* UITableView.swift in Sources */,
 				EC65F5B628B54F3C00114258 /* SceneDelegate.swift in Sources */,
 				EC73A7CF28B6BCB4003DE575 /* UmbrellaModel.swift in Sources */,
 			);
@@ -406,6 +426,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EC73A7D628B7723A003DE575 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EC73A7D728B7723A003DE575 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EC73A7D628B7723A003DE575 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EC65F5A828B54F3C00114258 /* Project object */;
 }
