@@ -16,7 +16,7 @@ class HomeViewController: UIViewController {
     // MARK: Lifecycle viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .white
+        view.backgroundColor = ColorSetup.white()
         title = "List of cities"
         
         setupTableView(for: listTableView)
@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
     // MARK: SetupTableView function
     private func setupTableView(for tableView: UITableView) {
         tableView.register(ListTableViewCell.self, forCellReuseIdentifier: ListTableViewCell.cellID)
-        tableView.rowHeight = 100
+//        tableView.rowHeight = 62
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -35,7 +35,7 @@ class HomeViewController: UIViewController {
 // MARK: - UITableViewDelegate, UITableViewDataSource
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -45,7 +45,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 78
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

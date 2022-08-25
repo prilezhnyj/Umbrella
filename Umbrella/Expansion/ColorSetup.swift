@@ -9,7 +9,7 @@ import UIKit
 
 class ColorSetup {
     static func white() -> UIColor {
-        return hexColor(value: "C5D1EB")
+        return hexColor(value: "E4EBFC")
     }
     
     static func blue() -> UIColor {

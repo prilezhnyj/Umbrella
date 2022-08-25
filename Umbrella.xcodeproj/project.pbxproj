@@ -19,6 +19,11 @@
 		EC73A7E328B795EF003DE575 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC73A7E228B795EF003DE575 /* UIView.swift */; };
 		EC73A7E528B79EBA003DE575 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC73A7E428B79EBA003DE575 /* UIColor.swift */; };
 		EC73A7E728B79EDB003DE575 /* ColorSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC73A7E628B79EDB003DE575 /* ColorSetup.swift */; };
+		EC73A7E928B80CD3003DE575 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC73A7E828B80CD3003DE575 /* UILabel.swift */; };
+		EC73A7EB28B80D4F003DE575 /* FontSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC73A7EA28B80D4F003DE575 /* FontSetup.swift */; };
+		EC73A7ED28B80E37003DE575 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC73A7EC28B80E37003DE575 /* Montserrat-Regular.ttf */; };
+		EC73A7EF28B80E46003DE575 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC73A7EE28B80E46003DE575 /* Montserrat-Bold.ttf */; };
+		EC73A7F128B80F28003DE575 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC73A7F028B80F28003DE575 /* UIStackView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +40,11 @@
 		EC73A7E228B795EF003DE575 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		EC73A7E428B79EBA003DE575 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		EC73A7E628B79EDB003DE575 /* ColorSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSetup.swift; sourceTree = "<group>"; };
+		EC73A7E828B80CD3003DE575 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		EC73A7EA28B80D4F003DE575 /* FontSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontSetup.swift; sourceTree = "<group>"; };
+		EC73A7EC28B80E37003DE575 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		EC73A7EE28B80E46003DE575 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		EC73A7F028B80F28003DE575 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +124,8 @@
 		EC73A7CC28B6B8EE003DE575 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				EC73A7EE28B80E46003DE575 /* Montserrat-Bold.ttf */,
+				EC73A7EC28B80E37003DE575 /* Montserrat-Regular.ttf */,
 				EC65F5BC28B54F3E00114258 /* Assets.xcassets */,
 				EC65F5C128B54F3E00114258 /* Info.plist */,
 			);
@@ -124,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				EC73A7DC28B78A17003DE575 /* UIKit */,
+				EC73A7EA28B80D4F003DE575 /* FontSetup.swift */,
 				EC73A7E628B79EDB003DE575 /* ColorSetup.swift */,
 			);
 			path = Expansion;
@@ -144,6 +157,8 @@
 				EC73A7DD28B78A25003DE575 /* UITableView.swift */,
 				EC73A7E228B795EF003DE575 /* UIView.swift */,
 				EC73A7E428B79EBA003DE575 /* UIColor.swift */,
+				EC73A7E828B80CD3003DE575 /* UILabel.swift */,
+				EC73A7F028B80F28003DE575 /* UIStackView.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -220,6 +235,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC73A7EF28B80E46003DE575 /* Montserrat-Bold.ttf in Resources */,
+				EC73A7ED28B80E37003DE575 /* Montserrat-Regular.ttf in Resources */,
 				EC65F5C028B54F3E00114258 /* LaunchScreen.storyboard in Resources */,
 				EC65F5BD28B54F3E00114258 /* Assets.xcassets in Resources */,
 			);
@@ -232,13 +249,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC73A7E928B80CD3003DE575 /* UILabel.swift in Sources */,
 				EC65F5B828B54F3C00114258 /* HomeViewController.swift in Sources */,
 				EC65F5B428B54F3C00114258 /* AppDelegate.swift in Sources */,
 				EC73A7DE28B78A25003DE575 /* UITableView.swift in Sources */,
 				EC73A7E328B795EF003DE575 /* UIView.swift in Sources */,
 				EC65F5B628B54F3C00114258 /* SceneDelegate.swift in Sources */,
 				EC73A7E528B79EBA003DE575 /* UIColor.swift in Sources */,
+				EC73A7F128B80F28003DE575 /* UIStackView.swift in Sources */,
 				EC73A7CF28B6BCB4003DE575 /* UmbrellaModel.swift in Sources */,
+				EC73A7EB28B80D4F003DE575 /* FontSetup.swift in Sources */,
 				EC73A7E728B79EDB003DE575 /* ColorSetup.swift in Sources */,
 				EC73A7E128B795AE003DE575 /* ListTableViewCell.swift in Sources */,
 			);
