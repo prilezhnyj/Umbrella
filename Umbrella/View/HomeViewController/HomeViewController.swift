@@ -6,12 +6,13 @@
 //
 
 import UIKit
-import SnapKit
 
 class HomeViewController: UIViewController {
     
     // MARK: UI-components
     private let listTableView = UITableView(backgroundColor: .clear)
+    
+    let lm = LocationManager()
     
     // MARK: Lifecycle viewDidLoad
     override func viewDidLoad() {

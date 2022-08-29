@@ -13,7 +13,6 @@
 		EC65F5BD28B54F3E00114258 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC65F5BC28B54F3E00114258 /* Assets.xcassets */; };
 		EC65F5C028B54F3E00114258 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC65F5BE28B54F3E00114258 /* LaunchScreen.storyboard */; };
 		EC73A7CF28B6BCB4003DE575 /* UmbrellaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC73A7CE28B6BCB4003DE575 /* UmbrellaModel.swift */; };
-		EC73A7D828B7723A003DE575 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = EC73A7D728B7723A003DE575 /* SnapKit */; };
 		EC73A7DE28B78A25003DE575 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC73A7DD28B78A25003DE575 /* UITableView.swift */; };
 		EC73A7E128B795AE003DE575 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC73A7E028B795AE003DE575 /* ListTableViewCell.swift */; };
 		EC73A7E328B795EF003DE575 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC73A7E228B795EF003DE575 /* UIView.swift */; };
@@ -24,6 +23,7 @@
 		EC73A7ED28B80E37003DE575 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC73A7EC28B80E37003DE575 /* Montserrat-Regular.ttf */; };
 		EC73A7EF28B80E46003DE575 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC73A7EE28B80E46003DE575 /* Montserrat-Bold.ttf */; };
 		EC73A7F128B80F28003DE575 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC73A7F028B80F28003DE575 /* UIStackView.swift */; };
+		ECF713CD28B951D900749519 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF713CC28B951D900749519 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +45,7 @@
 		EC73A7EC28B80E37003DE575 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		EC73A7EE28B80E46003DE575 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		EC73A7F028B80F28003DE575 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
+		ECF713CC28B951D900749519 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +53,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC73A7D828B7723A003DE575 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +84,7 @@
 				EC73A7CA28B6B8A6003DE575 /* Presenter */,
 				EC73A7CD28B6B96B003DE575 /* Expansion */,
 				EC73A7CC28B6B8EE003DE575 /* Resource */,
+				ECF713CC28B951D900749519 /* LocationManager.swift */,
 			);
 			path = Umbrella;
 			sourceTree = "<group>";
@@ -188,7 +189,6 @@
 			);
 			name = Umbrella;
 			packageProductDependencies = (
-				EC73A7D728B7723A003DE575 /* SnapKit */,
 			);
 			productName = Umbrella;
 			productReference = EC65F5B028B54F3C00114258 /* Umbrella.app */;
@@ -219,7 +219,6 @@
 			);
 			mainGroup = EC65F5A728B54F3C00114258;
 			packageReferences = (
-				EC73A7D628B7723A003DE575 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = EC65F5B128B54F3C00114258 /* Products */;
 			projectDirPath = "";
@@ -261,6 +260,7 @@
 				EC73A7EB28B80D4F003DE575 /* FontSetup.swift in Sources */,
 				EC73A7E728B79EDB003DE575 /* ColorSetup.swift in Sources */,
 				EC73A7E128B795AE003DE575 /* ListTableViewCell.swift in Sources */,
+				ECF713CD28B951D900749519 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,25 +470,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		EC73A7D628B7723A003DE575 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		EC73A7D728B7723A003DE575 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EC73A7D628B7723A003DE575 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = EC65F5A828B54F3C00114258 /* Project object */;
 }
