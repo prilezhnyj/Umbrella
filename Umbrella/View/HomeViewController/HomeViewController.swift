@@ -9,10 +9,22 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    // MARK: - Property
+    private let allCities = Bundle.main.decode([CityModel].self, from: "CitiesRussia")
+    private var filtredCities = [CityModel]()
+    
+    private var searchIsEmpty: Bool {
+        guard let text = searchController.searchBar.text else { return false}
+        return text.isEmpty
+    }
+    
+    private var isFiltring: Bool {
+        return searchController.isActive && !searchIsEmpty
+    }
+    
     // MARK: UI-components
     private let listTableView = UITableView(backgroundColor: .clear)
-    
-    let cities = Bundle.main.decode([CityModel].self, from: "CitiesRussia")
+    private let searchController = UISearchController(searchResultsController: nil)
     
     // MARK: Lifecycle viewDidLoad
     override func viewDidLoad() {
@@ -22,6 +34,15 @@ class HomeViewController: UIViewController {
         
         setupTableView(for: listTableView)
         setupConstraints()
+        setupSearchController()
+    }
+    
+    private func setupSearchController() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Введите город"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
     }
     
     // MARK: SetupTableView function
@@ -32,15 +53,38 @@ class HomeViewController: UIViewController {
     }
 }
 
+extension HomeViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContent(searchController.searchBar.text!)
+    }
+    
+    private func filterContent(_ searchText: String) {
+        filtredCities = allCities.filter({ result -> Bool in
+            return result.city!.lowercased().contains(searchText.lowercased())
+        })
+        listTableView.reloadData()
+    }
+}
+
 // MARK: - UITableViewDelegate, UITableViewDataSource
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        cities.count
+        if isFiltring == true {
+            return filtredCities.count
+        }
+        return allCities.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let city = cities[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.cellID, for: indexPath) as! ListTableViewCell
+        var city: CityModel
+        
+        if isFiltring == true {
+            city = filtredCities[indexPath.row]
+        } else {
+            city = allCities[indexPath.row]
+        }
+        
         cell.configureCell(for: city)
         return cell
     }
