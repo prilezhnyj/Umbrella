@@ -44,6 +44,12 @@ class ListTableViewCell: UITableViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // MARK: Configuration cell function
+    func configureCell(for city: CityModel) {
+        cityName.text = city.city
+        regionName.text = city.region
+    }
 }
 
 // MARK: - Setting UI-element constraints

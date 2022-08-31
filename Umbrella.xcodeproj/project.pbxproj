@@ -24,6 +24,9 @@
 		EC73A7EF28B80E46003DE575 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC73A7EE28B80E46003DE575 /* Montserrat-Bold.ttf */; };
 		EC73A7F128B80F28003DE575 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC73A7F028B80F28003DE575 /* UIStackView.swift */; };
 		ECF713CD28B951D900749519 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF713CC28B951D900749519 /* LocationManager.swift */; };
+		ECF8DA8B28BCD631005DC73D /* CitiesRussia in Resources */ = {isa = PBXBuildFile; fileRef = ECF8DA8A28BCD631005DC73D /* CitiesRussia */; };
+		ECF8DA8D28BCD6E5005DC73D /* CityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF8DA8C28BCD6E5005DC73D /* CityModel.swift */; };
+		ECF8DA8F28BCD736005DC73D /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF8DA8E28BCD736005DC73D /* Bundle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		EC73A7EE28B80E46003DE575 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		EC73A7F028B80F28003DE575 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		ECF713CC28B951D900749519 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		ECF8DA8A28BCD631005DC73D /* CitiesRussia */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CitiesRussia; sourceTree = "<group>"; };
+		ECF8DA8C28BCD6E5005DC73D /* CityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityModel.swift; sourceTree = "<group>"; };
+		ECF8DA8E28BCD736005DC73D /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +91,7 @@
 				EC73A7CD28B6B96B003DE575 /* Expansion */,
 				EC73A7CC28B6B8EE003DE575 /* Resource */,
 				ECF713CC28B951D900749519 /* LocationManager.swift */,
+				ECF8DA8E28BCD736005DC73D /* Bundle.swift */,
 			);
 			path = Umbrella;
 			sourceTree = "<group>";
@@ -93,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				EC73A7CE28B6BCB4003DE575 /* UmbrellaModel.swift */,
+				ECF8DA8C28BCD6E5005DC73D /* CityModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -125,6 +133,8 @@
 		EC73A7CC28B6B8EE003DE575 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				ECF8DA8928BCD625005DC73D /* Font */,
+				ECF8DA8A28BCD631005DC73D /* CitiesRussia */,
 				EC73A7EE28B80E46003DE575 /* Montserrat-Bold.ttf */,
 				EC73A7EC28B80E37003DE575 /* Montserrat-Regular.ttf */,
 				EC65F5BC28B54F3E00114258 /* Assets.xcassets */,
@@ -170,6 +180,13 @@
 				EC73A7E028B795AE003DE575 /* ListTableViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		ECF8DA8928BCD625005DC73D /* Font */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC73A7EF28B80E46003DE575 /* Montserrat-Bold.ttf in Resources */,
+				ECF8DA8B28BCD631005DC73D /* CitiesRussia in Resources */,
 				EC73A7ED28B80E37003DE575 /* Montserrat-Regular.ttf in Resources */,
 				EC65F5C028B54F3E00114258 /* LaunchScreen.storyboard in Resources */,
 				EC65F5BD28B54F3E00114258 /* Assets.xcassets in Resources */,
@@ -254,6 +272,8 @@
 				EC73A7DE28B78A25003DE575 /* UITableView.swift in Sources */,
 				EC73A7E328B795EF003DE575 /* UIView.swift in Sources */,
 				EC65F5B628B54F3C00114258 /* SceneDelegate.swift in Sources */,
+				ECF8DA8F28BCD736005DC73D /* Bundle.swift in Sources */,
+				ECF8DA8D28BCD6E5005DC73D /* CityModel.swift in Sources */,
 				EC73A7E528B79EBA003DE575 /* UIColor.swift in Sources */,
 				EC73A7F128B80F28003DE575 /* UIStackView.swift in Sources */,
 				EC73A7CF28B6BCB4003DE575 /* UmbrellaModel.swift in Sources */,

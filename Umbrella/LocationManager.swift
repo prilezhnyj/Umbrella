@@ -11,8 +11,10 @@ class LocationManager {
     
     private let apiKey = "35dcd7f1eb8dbd0d458136dfea7ff4db"
     
-    func getWeatherData(cityName: String, completion: @escaping (UmbrellaModel) -> Void) {
-        let urlStr = "https://api.openweathermap.org/data/2.5/weather?q=\(cityName),&appid=\(apiKey)&units=metric&lang=ru"
+    static let shared = LocationManager()
+    
+    func getWeatherData(city: CityModel, completion: @escaping (UmbrellaModel) -> Void) {
+        let urlStr = "https://api.openweathermap.org/data/2.5/weather?q=\(city.city!),&appid=\(apiKey)&units=metric&lang=ru"
         
         guard let url = URL(string: urlStr) else { return }
         URLSession.shared.dataTask(with: url) { data, response, error in
@@ -33,6 +35,4 @@ class LocationManager {
             return nil
         }
     }
-    
-    
 }

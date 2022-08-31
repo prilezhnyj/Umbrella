@@ -12,13 +12,13 @@ class HomeViewController: UIViewController {
     // MARK: UI-components
     private let listTableView = UITableView(backgroundColor: .clear)
     
-    let lm = LocationManager()
+    let cities = Bundle.main.decode([CityModel].self, from: "CitiesRussia")
     
     // MARK: Lifecycle viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = ColorSetup.white()
-        title = "List of cities"
+        title = "Список городов"
         
         setupTableView(for: listTableView)
         setupConstraints()
@@ -27,7 +27,6 @@ class HomeViewController: UIViewController {
     // MARK: SetupTableView function
     private func setupTableView(for tableView: UITableView) {
         tableView.register(ListTableViewCell.self, forCellReuseIdentifier: ListTableViewCell.cellID)
-//        tableView.rowHeight = 62
         tableView.delegate = self
         tableView.dataSource = self
     }
@@ -36,12 +35,13 @@ class HomeViewController: UIViewController {
 // MARK: - UITableViewDelegate, UITableViewDataSource
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        cities.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let city = cities[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.cellID, for: indexPath) as! ListTableViewCell
-        cell.backgroundColor = .clear
+        cell.configureCell(for: city)
         return cell
     }
     
